@@ -25,7 +25,7 @@ class LoginForm extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Image(
-            image: AssetImage("images/lockimage.png"),
+            image: AssetImage("assets/images/lockimage.png"),
             height: 100,
             width: 100,
           ),
@@ -35,7 +35,6 @@ class LoginForm extends StatelessWidget {
           ),
           const SizedBox(height: 40),
           TextFormField(
-
             decoration: const InputDecoration(
                 icon: Icon(Icons.account_circle),
                 border: OutlineInputBorder(),
@@ -54,11 +53,24 @@ class LoginForm extends StatelessWidget {
             children: [
               ElevatedButton(child: const Text("Login"), onPressed: () {
 
-
-
               }),
+
+
+
             ],
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("New here? "),
+              TextButton(onPressed: (){
+
+                Navigator.pushNamed(context, "/register");
+              }, child: Text("Register"))
+
+            ],
+          ),
+
         ],
       ),
     );
